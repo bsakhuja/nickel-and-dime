@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06A8A43926547D6C00E393A6 /* NickelAndDimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A8A43826547D6C00E393A6 /* NickelAndDimeApp.swift */; };
+		06A8A43B26547D6C00E393A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A8A43A26547D6C00E393A6 /* ContentView.swift */; };
+		06A8A43D26547D6F00E393A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06A8A43C26547D6F00E393A6 /* Assets.xcassets */; };
+		06A8A44026547D6F00E393A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06A8A43F26547D6F00E393A6 /* Preview Assets.xcassets */; };
+		06A8A44226547D6F00E393A6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A8A44126547D6F00E393A6 /* Persistence.swift */; };
+		06A8A44526547D6F00E393A6 /* NickelAndDime.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06A8A44326547D6F00E393A6 /* NickelAndDime.xcdatamodeld */; };
+		06A8A45026547D7000E393A6 /* NickelAndDimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A8A44F26547D7000E393A6 /* NickelAndDimeTests.swift */; };
+		06A8A45B26547D7000E393A6 /* NickelAndDimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A8A45A26547D7000E393A6 /* NickelAndDimeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		06A8A44C26547D7000E393A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06A8A42D26547D6C00E393A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06A8A43426547D6C00E393A6;
+			remoteInfo = NickelAndDime;
+		};
+		06A8A45726547D7000E393A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06A8A42D26547D6C00E393A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06A8A43426547D6C00E393A6;
+			remoteInfo = NickelAndDime;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06A8A43526547D6C00E393A6 /* NickelAndDime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NickelAndDime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06A8A43826547D6C00E393A6 /* NickelAndDimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickelAndDimeApp.swift; sourceTree = "<group>"; };
+		06A8A43A26547D6C00E393A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		06A8A43C26547D6F00E393A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		06A8A43F26547D6F00E393A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		06A8A44126547D6F00E393A6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		06A8A44426547D6F00E393A6 /* NickelAndDime.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NickelAndDime.xcdatamodel; sourceTree = "<group>"; };
+		06A8A44626547D6F00E393A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06A8A44B26547D7000E393A6 /* NickelAndDimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NickelAndDimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06A8A44F26547D7000E393A6 /* NickelAndDimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickelAndDimeTests.swift; sourceTree = "<group>"; };
+		06A8A45126547D7000E393A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06A8A45626547D7000E393A6 /* NickelAndDimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NickelAndDimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06A8A45A26547D7000E393A6 /* NickelAndDimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickelAndDimeUITests.swift; sourceTree = "<group>"; };
+		06A8A45C26547D7000E393A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06A8A43226547D6C00E393A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06A8A44826547D7000E393A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06A8A45326547D7000E393A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06A8A42C26547D6C00E393A6 = {
+			isa = PBXGroup;
+			children = (
+				06A8A43726547D6C00E393A6 /* NickelAndDime */,
+				06A8A44E26547D7000E393A6 /* NickelAndDimeTests */,
+				06A8A45926547D7000E393A6 /* NickelAndDimeUITests */,
+				06A8A43626547D6C00E393A6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		06A8A43626547D6C00E393A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06A8A43526547D6C00E393A6 /* NickelAndDime.app */,
+				06A8A44B26547D7000E393A6 /* NickelAndDimeTests.xctest */,
+				06A8A45626547D7000E393A6 /* NickelAndDimeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06A8A43726547D6C00E393A6 /* NickelAndDime */ = {
+			isa = PBXGroup;
+			children = (
+				06A8A43826547D6C00E393A6 /* NickelAndDimeApp.swift */,
+				06A8A43A26547D6C00E393A6 /* ContentView.swift */,
+				06A8A43C26547D6F00E393A6 /* Assets.xcassets */,
+				06A8A44126547D6F00E393A6 /* Persistence.swift */,
+				06A8A44626547D6F00E393A6 /* Info.plist */,
+				06A8A44326547D6F00E393A6 /* NickelAndDime.xcdatamodeld */,
+				06A8A43E26547D6F00E393A6 /* Preview Content */,
+			);
+			path = NickelAndDime;
+			sourceTree = "<group>";
+		};
+		06A8A43E26547D6F00E393A6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				06A8A43F26547D6F00E393A6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		06A8A44E26547D7000E393A6 /* NickelAndDimeTests */ = {
+			isa = PBXGroup;
+			children = (
+				06A8A44F26547D7000E393A6 /* NickelAndDimeTests.swift */,
+				06A8A45126547D7000E393A6 /* Info.plist */,
+			);
+			path = NickelAndDimeTests;
+			sourceTree = "<group>";
+		};
+		06A8A45926547D7000E393A6 /* NickelAndDimeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				06A8A45A26547D7000E393A6 /* NickelAndDimeUITests.swift */,
+				06A8A45C26547D7000E393A6 /* Info.plist */,
+			);
+			path = NickelAndDimeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06A8A43426547D6C00E393A6 /* NickelAndDime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06A8A45F26547D7100E393A6 /* Build configuration list for PBXNativeTarget "NickelAndDime" */;
+			buildPhases = (
+				06A8A43126547D6C00E393A6 /* Sources */,
+				06A8A43226547D6C00E393A6 /* Frameworks */,
+				06A8A43326547D6C00E393A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NickelAndDime;
+			productName = NickelAndDime;
+			productReference = 06A8A43526547D6C00E393A6 /* NickelAndDime.app */;
+			productType = "com.apple.product-type.application";
+		};
+		06A8A44A26547D7000E393A6 /* NickelAndDimeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06A8A46226547D7100E393A6 /* Build configuration list for PBXNativeTarget "NickelAndDimeTests" */;
+			buildPhases = (
+				06A8A44726547D7000E393A6 /* Sources */,
+				06A8A44826547D7000E393A6 /* Frameworks */,
+				06A8A44926547D7000E393A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06A8A44D26547D7000E393A6 /* PBXTargetDependency */,
+			);
+			name = NickelAndDimeTests;
+			productName = NickelAndDimeTests;
+			productReference = 06A8A44B26547D7000E393A6 /* NickelAndDimeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		06A8A45526547D7000E393A6 /* NickelAndDimeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06A8A46526547D7100E393A6 /* Build configuration list for PBXNativeTarget "NickelAndDimeUITests" */;
+			buildPhases = (
+				06A8A45226547D7000E393A6 /* Sources */,
+				06A8A45326547D7000E393A6 /* Frameworks */,
+				06A8A45426547D7000E393A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06A8A45826547D7000E393A6 /* PBXTargetDependency */,
+			);
+			name = NickelAndDimeUITests;
+			productName = NickelAndDimeUITests;
+			productReference = 06A8A45626547D7000E393A6 /* NickelAndDimeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06A8A42D26547D6C00E393A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					06A8A43426547D6C00E393A6 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					06A8A44A26547D7000E393A6 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 06A8A43426547D6C00E393A6;
+					};
+					06A8A45526547D7000E393A6 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 06A8A43426547D6C00E393A6;
+					};
+				};
+			};
+			buildConfigurationList = 06A8A43026547D6C00E393A6 /* Build configuration list for PBXProject "NickelAndDime" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 06A8A42C26547D6C00E393A6;
+			productRefGroup = 06A8A43626547D6C00E393A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06A8A43426547D6C00E393A6 /* NickelAndDime */,
+				06A8A44A26547D7000E393A6 /* NickelAndDimeTests */,
+				06A8A45526547D7000E393A6 /* NickelAndDimeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06A8A43326547D6C00E393A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06A8A44026547D6F00E393A6 /* Preview Assets.xcassets in Resources */,
+				06A8A43D26547D6F00E393A6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06A8A44926547D7000E393A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06A8A45426547D7000E393A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06A8A43126547D6C00E393A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06A8A44226547D6F00E393A6 /* Persistence.swift in Sources */,
+				06A8A43B26547D6C00E393A6 /* ContentView.swift in Sources */,
+				06A8A44526547D6F00E393A6 /* NickelAndDime.xcdatamodeld in Sources */,
+				06A8A43926547D6C00E393A6 /* NickelAndDimeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06A8A44726547D7000E393A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06A8A45026547D7000E393A6 /* NickelAndDimeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06A8A45226547D7000E393A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06A8A45B26547D7000E393A6 /* NickelAndDimeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06A8A44D26547D7000E393A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06A8A43426547D6C00E393A6 /* NickelAndDime */;
+			targetProxy = 06A8A44C26547D7000E393A6 /* PBXContainerItemProxy */;
+		};
+		06A8A45826547D7000E393A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06A8A43426547D6C00E393A6 /* NickelAndDime */;
+			targetProxy = 06A8A45726547D7000E393A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		06A8A45D26547D7100E393A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		06A8A45E26547D7100E393A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06A8A46026547D7100E393A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"NickelAndDime/Preview Content\"";
+				DEVELOPMENT_TEAM = DUCAN2M87U;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = NickelAndDime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.briansakhuja.NickelAndDime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		06A8A46126547D7100E393A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"NickelAndDime/Preview Content\"";
+				DEVELOPMENT_TEAM = DUCAN2M87U;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = NickelAndDime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.briansakhuja.NickelAndDime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		06A8A46326547D7100E393A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DUCAN2M87U;
+				INFOPLIST_FILE = NickelAndDimeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.briansakhuja.NickelAndDimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NickelAndDime.app/NickelAndDime";
+			};
+			name = Debug;
+		};
+		06A8A46426547D7100E393A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DUCAN2M87U;
+				INFOPLIST_FILE = NickelAndDimeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.briansakhuja.NickelAndDimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NickelAndDime.app/NickelAndDime";
+			};
+			name = Release;
+		};
+		06A8A46626547D7100E393A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DUCAN2M87U;
+				INFOPLIST_FILE = NickelAndDimeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.briansakhuja.NickelAndDimeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NickelAndDime;
+			};
+			name = Debug;
+		};
+		06A8A46726547D7100E393A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DUCAN2M87U;
+				INFOPLIST_FILE = NickelAndDimeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.briansakhuja.NickelAndDimeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NickelAndDime;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06A8A43026547D6C00E393A6 /* Build configuration list for PBXProject "NickelAndDime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06A8A45D26547D7100E393A6 /* Debug */,
+				06A8A45E26547D7100E393A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06A8A45F26547D7100E393A6 /* Build configuration list for PBXNativeTarget "NickelAndDime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06A8A46026547D7100E393A6 /* Debug */,
+				06A8A46126547D7100E393A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06A8A46226547D7100E393A6 /* Build configuration list for PBXNativeTarget "NickelAndDimeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06A8A46326547D7100E393A6 /* Debug */,
+				06A8A46426547D7100E393A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06A8A46526547D7100E393A6 /* Build configuration list for PBXNativeTarget "NickelAndDimeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06A8A46626547D7100E393A6 /* Debug */,
+				06A8A46726547D7100E393A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		06A8A44326547D6F00E393A6 /* NickelAndDime.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				06A8A44426547D6F00E393A6 /* NickelAndDime.xcdatamodel */,
+			);
+			currentVersion = 06A8A44426547D6F00E393A6 /* NickelAndDime.xcdatamodel */;
+			path = NickelAndDime.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 06A8A42D26547D6C00E393A6 /* Project object */;
+}
