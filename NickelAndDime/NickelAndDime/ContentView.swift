@@ -25,30 +25,53 @@ struct ContentView: View {
         return dateFormatter
     }
     
-    @State private var income = [Transaction]()
-    @State private var expenses = [Transaction]()
+    var numberFormatter: NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale.current
+        return formatter
+    }
     
-    @State var field1: String = ""
+    @StateObject var store = BudgetStore()
+    
+    @State var transactionName: String = ""
+    @State var transactionAmount: Double = 0
+    
+    var someNumberProxy: Binding<String> {
+            Binding<String>(
+                get: { String(format: "$%.02f", self.transactionAmount) },
+                set: {
+                    if let value = numberFormatter.number(from: $0) {
+                        self.transactionAmount = value.doubleValue
+                    }
+                }
+            )
+        }
+
     
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("Income"),
-                        footer: Button(action: addIncome) {
-                            Text("+ Add Income")
-                        })
+                Text(String(format: "Net income $%.2f", netIncome))
+                Section(
+                    header: Text(String(format: "Income $%.2f",
+                                        sum(transactions: store.income))).foregroundColor(Color.green),
+                    footer: Button(action: addIncome) {
+                        Text("+ Add income")
+                    })
                 {
-                    ForEach(income, id: \.self) { incomeLine in
-                        Text(incomeLine.name)
+                    ForEach(store.income, id: \.self) { incomeLine in
+                        TransactionRow(transaction: incomeLine)
+                        
                     }
                 }
-                Section(header: Text("Expenses"),
+                Section(header: Text(String(format: "Expenses -$%.2f", sum(transactions: store.expenses))).foregroundColor(Color.red),
                         footer: Button(action: addExpense) {
-                            Text("+ Add Expense")
+                            Text("+ Add expense")
                         })
                 {
-                    ForEach(expenses, id: \.self) { expenseLine in
-                        Text(expenseLine.name)
+                    ForEach(store.expenses, id: \.self) { expenseLine in
+                        TransactionRow(transaction: expenseLine)
                     }
                 }
             }
@@ -66,17 +89,6 @@ struct ContentView: View {
                                                 .frame(width: 32, height: 32, alignment: .center)
                                         }
                                     }
-//                                    ZStack {
-//                                        DatePicker("label", selection: $date, displayedComponents: .date)
-//                                            .datePickerStyle(CompactDatePickerStyle())
-//                                            .labelsHidden()
-//                                        Button(action: addItem) {
-//                                            Image(systemName: "calendar")
-//                                                .resizable()
-//                                                .frame(width: 32, height: 32, alignment: .center)
-//                                        }
-//
-//                                    }
             )
         }
     }
@@ -94,11 +106,20 @@ struct ContentView: View {
     }
     
     private func addIncome() {
-        income.append(Transaction(name: "example income", value: 23.0, month: selectedDate))
+        withAnimation {
+            store.income.append(Transaction(name: $transactionName, value: Binding<Double>.constant(0), month: selectedDate, isIncome: true))
+        }
     }
 
     private func addExpense() {
-        expenses.append(Transaction(name: "example expense", value: 23.0, month: selectedDate))
+        withAnimation {
+        store.expenses.append(Transaction(name: $transactionName, value: Binding<Double>.constant(0), month: selectedDate))
+        }
+    }
+    
+    private func sum(transactions: [Transaction]) -> Double {
+        return transactions.compactMap { $0.value }
+            .reduce(0, +)
     }
 
     private func deleteItems(offsets: IndexSet) {
@@ -115,14 +136,11 @@ struct ContentView: View {
             }
         }
     }
+    
+    var netIncome: Double {
+        sum(transactions: store.income) - sum(transactions: store.expenses)
+    }
 }
-
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
@@ -130,8 +148,70 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct Transaction: Hashable {
-    let name: String
-    let value: Double
-    let month: Date
+struct Transaction: Hashable, Identifiable {
+    @Binding var name: String
+    @Binding var value: Double
+    var month: Date
+    var isIncome: Bool = false
+    var id = UUID()
+    
+    // MARK: - Hashable Conformance
+    
+    static func == (lhs: Transaction, rhs: Transaction) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
+
+final class BudgetStore: ObservableObject {
+    @Published var income = [Transaction]()
+    @Published var expenses = [Transaction]()
+}
+
+struct TransactionRow: View {
+    var transaction = Transaction(name: Binding<String>.constant(""), value: Binding<Double>.constant(0), month: Date())
+    
+    var numberFormatter: NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale.current
+        return formatter
+    }
+    
+    var stringFormat: String {
+        return transaction.isIncome ? "$%.02f" : "-$%.02f"
+    }
+    
+    var textFieldPlaceholder: String {
+        return transaction.isIncome ? "New income" : "New expense"
+    }
+    
+    var someNumberProxy: Binding<String> {
+            Binding<String>(
+                get: { String(format: stringFormat, self.transaction.value) },
+                set: {
+                    if let value = numberFormatter.number(from: $0) {
+                        self.transaction.value = value.doubleValue
+                    }
+                }
+            )
+        }
+    
+    var body: some View {
+        HStack {
+            TextField(
+                textFieldPlaceholder,
+                text: transaction.$name)
+            Spacer()
+            TextField(
+                "Amount",
+                text: someNumberProxy)
+                .keyboardType(.decimalPad)
+                .multilineTextAlignment(.trailing)
+                .foregroundColor(transaction.isIncome ? Color.green : Color.red)
+        }
+    }
 }
